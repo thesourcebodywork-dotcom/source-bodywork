@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f2e9">
+<title>Source Bodywork | Return to Yourself</title>
+<meta name="description" content="Personalized therapeutic massage and intentional bodywork in Columbus, Ohio. A space to come home to yourself.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:#f8f2e9;
+  --paper:#f0e6d8;
+  --olive:#515738;
+  --ink:#342b25;
+  --terra:#ad674e;
+  --tan:#d8bca2;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--cream); color:var(--ink); font-family:'DM Sans',Arial,sans-serif; }
+h1,h2,h3,.brand { font-family:'Playfair Display',Georgia,serif; font-weight:400; }
+a { color:inherit; text-decoration:none; }
+header { min-height:82px; display:flex; align-items:center; justify-content:space-between; padding:12px 6%; background:#fbf6ee; }
+.brand { font-size:30px; letter-spacing:-1.5px; white-space:nowrap; line-height:1; }
+.brand .source { color:#ad8c73; }
+.brand .bodywork { color:#4a3027; font-style:italic; margin-left:-2px; }
+nav { display:flex; gap:25px; font-size:11px; align-items:center; letter-spacing:.05em; }
+nav a:hover { text-decoration:underline; }
+.btn { background:var(--olive); color:white; border-radius:2px; padding:15px 24px; font-size:11px; letter-spacing:.13em; text-transform:uppercase; display:inline-block; text-align:center; }
+.btn:hover { background:#3d442a; }
+.btn.outline { background:transparent; border:1px solid var(--olive); color:var(--olive); }
+.hero { display:grid; grid-template-columns:48% 52%; min-height:640px; background:#e7d6c3; }
+.hero-copy { padding:95px 9% 85px 13%; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; }
+.eyebrow { font-size:11px; letter-spacing:.24em; text-transform:uppercase; font-weight:600; color:#81553e; }
+.hero h1 { font-size:clamp(54px,6vw,100px); line-height:1.04; margin:24px 0 26px; letter-spacing:-.045em; }
+.hero h1 em { color:#96583f; font-weight:400; }
+.hero p { font-size:15px; line-height:1.95; max-width:410px; margin:0 0 34px; }
+.hero-photo {
+  background:
+    linear-gradient(0deg,rgba(48,25,15,.16),rgba(48,25,15,.03)),
+    url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=85')
+    center/cover;
+  position:relative;
+  min-height:480px;
+}
+.photo-label { position:absolute; bottom:25px; right:25px; color:white; background:rgba(50,38,27,.72); padding:11px 15px; font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+.ribbon { padding:23px; text-align:center; background:#626346; color:white; font-size:11px; letter-spacing:.2em; text-transform:uppercase; }
+.section { padding:95px max(7%,calc((100vw - 1200px)/2)); }
+.center { text-align:center; }
+.section h2 { font-size:clamp(38px,4vw,61px); line-height:1.14; margin:16px 0 23px; }
+.lead { max-width:680px; margin:0 auto; color:#5e534b; line-height:1.9; font-size:15px; }
+.services { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:48px; }
+.service { border:1px solid #d9cbbb; background:#faf5ed; padding:34px 30px 36px; min-height:280px; }
+.service .num { font-size:11px; letter-spacing:.2em; color:#a1664b; }
+.service h3 { font-size:28px; margin:25px 0 14px; }
+.service p { font-size:13px; line-height:1.85; color:#62584e; }
+.service a { font-size:11px; text-transform:uppercase; letter-spacing:.12em; border-bottom:1px solid #9b705b; padding-bottom:5px; }
+.story { display:grid; grid-template-columns:43% 57%; background:#b46e54; color:#fff6ed; }
+.story-visual {
+  min-height:480px;
+  background:
+    linear-gradient(145deg,rgba(116,63,48,.45),rgba(169,94,78,.25)),
+    url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85')
+    center/cover;
+}
+.story-copy { padding:95px 12%; align-self:center; }
+.story .eyebrow { color:#f2d4bb; }
+.story h2 { font-size:clamp(43px,4.7vw,70px); line-height:1.14; }
+.story p { line-height:1.9; font-size:15px; max-width:510px; }
+.story .btn { background:#f5e8d7; color:#513e30; margin-top:20px; }
+.about { display:grid; grid-template-columns:1fr 1fr; gap:10%; align-items:center; }
+.portrait { min-height:380px; background:#d8c0a7; display:flex; align-items:center; justify-content:center; text-align:center; padding:40px; color:#694c3b; border:1px solid #d0b79c; }
+.portrait span { font-family:Georgia,serif; font-size:35px; line-height:1.25; }
+.about p { line-height:1.9; color:#62584e; }
+.membership { background:#e8ddcc; text-align:center; }
+.membership-box { border:1px solid #bca78e; padding:45px; max-width:780px; margin:30px auto 0; }
+.membership h3 { font-size:32px; margin:0 0 15px; }
+.membership p { font-size:14px; line-height:1.85; }
+.visit { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.visit h2 { font-size:50px; }
+.visit p { line-height:1.9; }
+.detail { border-top:1px solid #d8c6b2; padding:17px 0; font-size:13px; }
+.footer { background:#3c4231; color:#f8f0e3; text-align:center; padding:65px 20px 35px; }
+.footer h2 { font-size:52px; margin:0 0 10px; }
+.footer p { font-size:13px; line-height:1.8; }
+.footer .btn { background:#e9d4bc; color:#3c4231; margin:22px 0 35px; }
+.footer small { opacity:.7; font-size:11px; }
+.mobile-book { display:none; }
+@media(max-width:850px) {
+  header { padding:15px 5%; }
+  .brand { font-size:25px; }
+  nav { gap:12px; }
+  nav a:not(.btn) { display:none; }
+  header .btn { padding:12px 14px; font-size:10px; }
+  .hero { grid-template-columns:1fr; }
+  .hero-copy { padding:70px 7% 60px; }
+  .hero h1 { font-size:clamp(54px,12vw,75px); }
+  .hero-photo { min-height:410px; }
+  .ribbon { font-size:9px; line-height:2; padding:18px; }
+  .section { padding:70px 7%; }
+  .services { grid-template-columns:1fr; gap:13px; margin-top:35px; }
+  .service { min-height:0; padding:28px; }
+  .service h3 { margin:15px 0 10px; }
+  .story,.about,.visit { grid-template-columns:1fr; gap:0; }
+  .story-visual { min-height:300px; }
+  .story-copy { padding:65px 7%; }
+  .about { gap:30px; }
+  .portrait { min-height:270px; }
+  .membership-box { padding:27px 20px; }
+  .visit { gap:20px; }
+  .visit h2 { font-size:43px; }
+  .footer h2 { font-size:43px; }
+  .mobile-book { display:block; position:fixed; bottom:15px; right:15px; z-index:10; background:#515738; color:white; padding:14px 20px; box-shadow:0 5px 20px #0003; font-size:12px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="#home"><span class="source">Source</span><span class="bodywork">Bodywork</span></a>
+  <nav>
+    <a href="#services">SERVICES</a>
+    <a href="#philosophy">PHILOSOPHY</a>
+    <a href="#about">ABOUT</a>
+    <a href="#membership">MEMBERSHIPS</a>
+    <a class="btn" href="https://www.massagebook.com/therapists/source-bodywork?src=external">BOOK NOW</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <span class="eyebrow">THERAPEUTIC MASSAGE · COLUMBUS, OHIO</span>
+    <h1>A space to<br><em>come home</em><br>to yourself.</h1>
+    <p>Intentional, individualized bodywork for the places you hold tension—and the parts of yourself ready to find ease again.</p>
+    <a class="btn" href="https://www.massagebook.com/therapists/source-bodywork?src=external">EXPLORE YOUR NEXT SESSION →</a>
+  </div>
+  <div class="hero-photo">
+    <div class="photo-label">Illustrative photo · Studio photos coming soon</div>
+  </div>
+</section>
+
+<div class="ribbon">THOUGHTFUL TOUCH &nbsp; ✦ &nbsp; THERAPEUTIC EXPERTISE &nbsp; ✦ &nbsp; SPACE TO RESTORE</div>
+
+<section class="section center" id="services">
+  <div class="eyebrow">CARE THAT MEETS YOU WHERE YOU ARE</div>
+  <h2>More than a moment of relaxation.</h2>
+  <p class="lead">Whether you're navigating persistent tension, jaw discomfort, or simply need space to slow down, every session is shaped around you—not a one-size-fits-all routine.</p>
+
+  <div class="services">
+    <article class="service">
+      <span class="num">01 / RELIEF</span>
+      <h3>Therapeutic Massage</h3>
+      <p>Personalized massage combining focused techniques and restorative touch to support comfort, movement, and everyday well-being.</p>
+      <a href="https://www.massagebook.com/therapists/source-bodywork?src=external">EXPLORE SESSIONS →</a>
+    </article>
+    <article class="service">
+      <span class="num">02 / SPECIALIZED CARE</span>
+      <h3>Jaw &amp; Intraoral Massage</h3>
+      <p>Specialized facial and intraoral soft-tissue techniques, offered when appropriate with informed consent. Treatment of diagnosed TMJ dysfunction requires a written referral.</p>
+      <a href="https://www.massagebook.com/therapists/source-bodywork?src=external">LEARN MORE →</a>
+    </article>
+    <article class="service">
+      <span class="num">03 / ENHANCEMENTS</span>
+      <h3>Intentional Additions</h3>
+      <p>From cupping to comforting hot stones, enhancements are selected to complement your treatment and preferences.</p>
+      <a href="https://www.massagebook.com/therapists/source-bodywork?src=external">VIEW OPTIONS →</a>
+    </article>
+  </div>
+</section>
+
+<section class="story" id="philosophy">
+  <div class="story-visual"></div>
+  <div class="story-copy">
+    <span class="eyebrow">THE SOURCE PHILOSOPHY</span>
+    <h2>Your body<br><em>has a story.</em></h2>
+    <p>Our experiences can shape the ways we move, hold tension, and inhabit our bodies. At Source, bodywork begins with listening—making room for relief, awareness, and a deeper connection to yourself.</p>
+    <p>Here, your body is never something to fix. It's something worth understanding.</p>
+    <a class="btn" href="#about">DISCOVER THE APPROACH →</a>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="portrait">
+    <span>A familiar face.<br><em>A personal approach.</em><br><small style="font:12px Arial;letter-spacing:.1em">THERAPIST PORTRAIT COMING SOON</small></span>
+  </div>
+  <div>
+    <span class="eyebrow">MEET YOUR THERAPIST</span>
+    <h2>Care rooted in curiosity and connection.</h2>
+    <p>Source Bodywork is an independently owned practice built on a simple belief: meaningful therapeutic care starts with being heard.</p>
+    <p>With a passion for focused pain-relief techniques and a respect for each client's individual experience, I bring intention, skill, and presence to every session.</p>
+    <a class="btn outline" href="https://www.massagebook.com/therapists/source-bodywork?src=external">GET TO KNOW SOURCE →</a>
+  </div>
+</section>
+
+<section class="section membership" id="membership">
+  <span class="eyebrow">A RITUAL OF RETURNING</span>
+  <h2>Make space for yourself,<br><em>again and again.</em></h2>
+  <p class="lead">Consistent care can be a meaningful part of feeling your best. Explore founding memberships designed to make regular therapeutic bodywork more accessible.</p>
+  <div class="membership-box">
+    <h3>Founding Memberships</h3>
+    <p>A special invitation for Source's earliest members.<br>Limited to the first 30 enrollments or the first 90 days after opening, whichever comes first.</p>
+    <a class="btn" href="https://www.massagebook.com/therapists/source-bodywork?src=external">EXPLORE MEMBERSHIPS →</a>
+  </div>
+</section>
+
+<section class="section visit" id="visit">
+  <div>
+    <span class="eyebrow">BEFORE YOU ARRIVE</span>
+    <h2>Come as you are.</h2>
+    <p>New to therapeutic massage? You don't need to know exactly what your body needs before walking through the door. We'll talk about your goals, your comfort, and what feels right for you.</p>
+    <a class="btn outline" href="https://www.massagebook.com/therapists/source-bodywork?src=external">YOUR FIRST VISIT →</a>
+  </div>
+  <div>
+    <div class="detail">01 &nbsp; A conversation before your session</div>
+    <div class="detail">02 &nbsp; Pressure and positioning guided by your comfort</div>
+    <div class="detail">03 &nbsp; Thoughtful, individualized therapeutic care</div>
+    <div class="detail">04 &nbsp; Space to reconnect at your own pace</div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="book">
+  <div class="eyebrow" style="color:#d8c7a6">YOUR SPACE IS WAITING</div>
+  <h2>Return to yourself.</h2>
+  <p>Source Bodywork · Columbus, Ohio<br>Therapeutic care, thoughtfully offered.</p>
+  <a class="btn" href="https://www.massagebook.com/therapists/source-bodywork?src=external">BOOK YOUR SESSION →</a>
+  <br>
+  <small>© 2026 Source Bodywork</small>
+</footer>
+
+<a class="mobile-book" href="https://www.massagebook.com/therapists/source-bodywork?src=external">BOOK A SESSION ↗</a>
+
+</body>
+</html>
