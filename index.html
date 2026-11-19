@@ -22,8 +22,7 @@
   --tan:#d8bca2;
   --white:#fffaf4;
 
-  /* Stock photos — replace these URLs later */
-  --hero-photo:url('hero.png');
+  --hero-photo:url('./hero.png');
   --story-photo:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85');
   --detail-photo:url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=85');
 }
@@ -146,9 +145,12 @@ nav a:hover { text-decoration:underline; }
 }
 
 .hero-photo {
-  background:
+  background-image:
     linear-gradient(0deg,rgba(48,25,15,.15),rgba(48,25,15,.02)),
-    var(--hero-photo) center/cover;
+    var(--hero-photo);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
   position:relative;
   min-height:480px;
 }
@@ -550,9 +552,7 @@ nav a:hover { text-decoration:underline; }
     <a class="btn" href="#booking">EXPLORE YOUR NEXT SESSION →</a>
   </div>
 
-  <div class="hero-photo">
-    <div class="photo-label">Illustrative stock photography</div>
-  </div>
+  <div class="hero-photo"></div>
 </section>
 
 <div class="ribbon">
